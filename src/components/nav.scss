@@ -1,0 +1,171 @@
+@import "./_breakpoints.scss";
+@import "./_mixins.scss";
+
+.nav_wrapper {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  height: 42px;
+  background: white;
+  z-index: 60;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+
+  @include md {
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+    
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md {
+      width: 90%;
+    }
+
+    .left_nav {
+      justify-content: flex-end;
+      align-items: baseline;
+      width: fit-content;
+
+      a {
+        height: 27px;
+        transition: opacity 0.2s ease-in-out;
+
+      }
+    }
+
+    .left_logo{
+      height: 30px;
+      width: 110px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      @include md {
+        margin-left: 1em;
+      }
+
+      .links:hover {
+        cursor: pointer;
+      }
+
+      .nav_selected {
+        border: 2px solid rgba(82, 148, 255, 0.62);
+        border-radius: 12px;
+        padding-bottom: 4px;
+        margin-top: 6px;
+        background-color: #EFF6FF;
+        height: 47px;
+        width: 100px;
+        
+      }
+
+      .nav_option {
+        cursor: pointer;
+      }
+
+      .nav_option:hover {
+        opacity: 0.6;
+        //cursor: poniter;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        width: 100%;
+        transition: background 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        max-width: 100px;
+
+        label {
+          text-align: center;
+          width: 100%;
+        }
+
+        label:hover{
+          cursor: pointer;
+        }
+
+        @include md {
+          margin: 0 20px;
+        }
+      }
+
+      .login_button {
+        background-image: linear-gradient(116.96deg, #4CFF8E 15.31%, #87EFFF 82.69%);
+        background-size: 120%;
+        background-position: center;
+        border-radius: 100px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        transition: all 0.2s ease-in-out;
+        background-clip: padding-box, border-box;
+        border: 1px solid transparent;
+        background-origin: padding-box;
+
+        @include bkg-img-transition();
+
+      }
+
+      .login_button_def {
+        background: black;
+        color: white;
+        border-radius: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        border: 2px solid black;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: transparent;
+          color: black;
+        }
+      }
+    }
+  
+    .wallet_indicator {
+      border-radius: 20px;
+      padding: 8px 12px;
+      background: #FFFFFF;
+      border: 1px solid #C8C8C8;
+      width: 130px;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @include md {
+        margin-left: 50px;
+      }
+
+      .icon_not_connected {
+        color: #D9D9D9;
+      }
+
+      .icon_connected {
+        color: #4CFF8E;
+      }
+    }
+  }
+}
