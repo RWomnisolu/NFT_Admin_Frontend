@@ -22,6 +22,7 @@
 }
 .table_title_item{
     width: 14%;
+    overflow-wrap: break-word;
 }
 .table_title_list{
     width: 100%;

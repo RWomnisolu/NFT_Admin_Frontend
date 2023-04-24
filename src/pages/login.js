@@ -10,7 +10,7 @@ function LoginPage() {
     let nav=useNavigate();
     const [Email,setEmail]=useState('');
     const [password,setPassword]=useState('')
-    const baseurl="http://localhost:8081"
+    const baseurl="http://35.89.86.149:8081"
     let body ={
       username: Email,
       password: password

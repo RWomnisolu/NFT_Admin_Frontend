@@ -15,7 +15,7 @@ function LendPage(){
     const [loanList, setLoanList] = useState([])
     const [emptyTx, setEmptyTx] = useState(false)
     const [show, setShow]=useState(true)
-    const baseurl="http://localhost:8081"
+    const baseurl="http://35.89.86.149:8081"
 
     useEffect(()=>{
         let token=Cookies.get('token');
@@ -150,6 +150,11 @@ function LendPage(){
             return (
                 <button className="button" onClick={() =>{LiquidationSell(loan)}} >Sell</button>
             );
+            case 'failed':
+                return (
+                    <button disabled className="button">buy</button>
+                );
+                       
                             
           default:
             return (

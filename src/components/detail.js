@@ -6,7 +6,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 function Detail({loan, token, setRefresh, refresh}){
     const [show, setShow] = useState(false)
     const [txHash, setTxHash] = useState(false)    
-    const baseurl="http://localhost:8081"
+    const baseurl="http://35.89.86.149:8081"
 
 
     return (
@@ -20,7 +20,7 @@ function Detail({loan, token, setRefresh, refresh}){
                         Transaction information can be checked as below   
                         </span>
 
-                        <a className='link' href={"https://goerli.etherscan.io/tx/"+loan.sold_tx_hash}>{loan.sold_tx_hash.slice(0,7)}</a>
+                        <a className='link' href={"https://goerli.etherscan.io/tx/"+loan.sold_tx_hash}>{loan.sold_tx_hash?.slice(0,7)}</a>
 
                     </div>
                 </div>,

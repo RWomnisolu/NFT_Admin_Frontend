@@ -60,7 +60,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router  basename='/admin'>
       <div className="App">
       <Routes>
       <Route path={"/"} element={ 
