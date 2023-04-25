@@ -200,6 +200,7 @@ function LendPage(){
                             ) : (
                                 <div className="table_title_list">The payment is empty</div>
                             )}
+        
             </div>
 
         </div>
