@@ -11,7 +11,6 @@ import Tooltip from './tooltip/tooltip'
 import eth from '../img/eth-icon.png'
 const chainIds = [
     { id: 1, name: 'Ethereum' },
-    { id: 5, name: 'Goerli' },
 ]
 
 export default function Navigation({
@@ -67,7 +66,7 @@ export default function Navigation({
                     <Link to="/">
                             <img src={Logo} className="left_logo" alt="logo" />
                     </Link>
-                        <Link
+                        {/* <Link
                             to="/manage"
                             className={
                                 currPage.includes('manage') ||
@@ -78,7 +77,7 @@ export default function Navigation({
                         >
                             {' '}
                             <label> Manage </label>{' '}
-                        </Link>
+                        </Link> */}
 
                         <Link
                             to="/lend"

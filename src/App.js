@@ -23,7 +23,6 @@ function App() {
 
  const chainIds = [
     { id: 1, name: 'Ethereum' },
-    { id: 5, name: 'Goerli' },
 ]
 
 
@@ -72,7 +71,7 @@ function App() {
           <LoginPage />
         </>
       }/>
-        <Route path={"/manage"} element={
+        {/* <Route path={"/manage"} element={
         <>
           <Navigation
               setAccounts={setAccounts}
@@ -88,7 +87,7 @@ function App() {
           <ManagePage />
         </>
         
-      }/>
+      }/> */}
         <Route path={"/lend"} element={
         <>
           <Navigation

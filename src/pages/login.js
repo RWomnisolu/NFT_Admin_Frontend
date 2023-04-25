@@ -30,7 +30,7 @@ function LoginPage() {
         if(data.status==200){
           console.log(data)
           Cookies.set('token', data.token)
-          nav('manage')
+          nav('/lend')
         }else{
           //alert("invaild password")
         }

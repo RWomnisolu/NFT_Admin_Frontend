@@ -1,3 +1,9 @@
+.contain{
+    width: fit-content;
+    margin-top: 100px;
+    height: 100%;
+    margin-bottom: 100px;
+}
 .table_box{
     display: flex;
     flex-direction: column;
@@ -5,7 +11,6 @@
     width: 100%;
 }
 .table_title{
-    width: 100%;
     background-color:#EFF6FF ;
     display: flex;
     flex-direction: row;
@@ -25,7 +30,6 @@
     overflow-wrap: break-word;
 }
 .table_title_list{
-    width: 100%;
     background-color:#ffffff ;
     display: flex;
     flex-direction: row;
