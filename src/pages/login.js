@@ -10,7 +10,7 @@ function LoginPage() {
     let nav=useNavigate();
     const [Email,setEmail]=useState('');
     const [password,setPassword]=useState('')
-    const baseurl="http://35.89.86.149:8081"
+    const baseurl= process.env.REACT_APP_API_URL
     let body ={
       username: Email,
       password: password

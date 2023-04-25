@@ -15,8 +15,8 @@ function LendPage(){
     const [loanList, setLoanList] = useState([])
     const [emptyTx, setEmptyTx] = useState(false)
     const [show, setShow]=useState(true)
-    const baseurl="http://35.89.86.149:8081"
-
+    const baseurl=process.env.REACT_APP_API_URL
+    console.log(process.env.REACT_APP_NFT_URL)
     useEffect(()=>{
         let token=Cookies.get('token');
         if(!token){
@@ -81,7 +81,7 @@ function LendPage(){
             console.log(data)
             if(data.status==200){
                 setRefresh(!refresh)  
-                window.open("https://testnets.opensea.io/assets/goerli/"+loan.nft_address+"/"+loan.token_id)
+                window.open(process.env.REACT_APP_NFT_URL+loan.nft_address+"/"+loan.token_id)
             }else{
                 console.log(data?.msg)
                 //alert(data?.msg)

@@ -6,7 +6,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 function Modal({loan, token, setRefresh, refresh}){
     const [show, setShow] = useState(false)
     const [txHash, setTxHash] = useState(false)    
-    const baseurl="http://35.89.86.149:8081"
+    const baseurl=process.env.REACT_APP_API_URL
 
     async function soldTransaction(loan){
         let data={
