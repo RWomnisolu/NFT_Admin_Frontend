@@ -3,8 +3,10 @@
     width: 50%;
     max-width: 400px;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
+    height: 100vh;
+    display: flex;
 }
 .input{
     height: 40px;
