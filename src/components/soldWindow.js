@@ -27,14 +27,14 @@ function Modal({loan, token, setRefresh, refresh}){
             console.log(data)
             if(data.status==200){
                 setRefresh(!refresh)             
-                //alert("update success")
+                ////alert("update success")
             }else{
                 console.log(data?.msg)
-                alert(data?.msg)
-                alert('update failed')
+                //alert(data?.msg)
+                //alert('update failed')
             }
         }).catch((e)=>{
-            alert(e)
+            //alert(e)
             console.log(e)
           })
     }

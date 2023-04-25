@@ -32,11 +32,11 @@ function LoginPage() {
           Cookies.set('token', data.token)
           nav('manage')
         }else{
-          alert("invaild password")
+          //alert("invaild password")
         }
 
       }).catch((e)=>{
-        alert("e")
+        //alert("e")
         console.log(e)
 
       })

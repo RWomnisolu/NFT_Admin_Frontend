@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, {  useState, useEffect } from "react";
 import Cookies from 'js-cookie'
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Web3 from "web3";
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import Navigation from './components/nav'

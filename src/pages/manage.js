@@ -17,7 +17,7 @@ function ManagePage(){
     useEffect(()=>{
         let token=Cookies.get('token');
         if(!token){
-            alert('invaild token, please login again')
+            //alert('invaild token, please login again')
             nav('/login')
         }else{
             console.log(token)
@@ -44,15 +44,15 @@ function ManagePage(){
         }).then((response)=>response.json())
         .then((data)=>{
             if(data.status==200){
-                 alert('success')
+                 //alert('success')
                  nav('/manage')
             }else{
                 console.log(data?.msg)
-                alert(data?.msg)
-                alert('creating failed')
+                //alert(data?.msg)
+                //alert('creating failed')
             }
         }).catch((e)=>{
-            alert(e)
+            //alert(e)
             console.log(e)
     
           })

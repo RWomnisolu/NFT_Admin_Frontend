@@ -20,7 +20,7 @@ function LendPage(){
     useEffect(()=>{
         let token=Cookies.get('token');
         if(!token){
-            alert('invaild token, please login again')
+            //alert('invaild token, please login again')
             nav('/login')
         }else{
             console.log(token)
@@ -53,11 +53,11 @@ function LendPage(){
                 }
             }else{
                 console.log(data?.msg)
-                alert(data?.msg)
-                alert('getlist failed')
+                //alert(data?.msg)
+                //alert('getlist failed')
             }
         }).catch((e)=>{
-            alert(e)
+            //alert(e)
             console.log(e)
           })
 
@@ -84,11 +84,11 @@ function LendPage(){
                 window.open("https://testnets.opensea.io/assets/goerli/"+loan.nft_address+"/"+loan.token_id)
             }else{
                 console.log(data?.msg)
-                alert(data?.msg)
-                alert('update failed')
+                //alert(data?.msg)
+                //alert('update failed')
             }
         }).catch((e)=>{
-            alert(e)
+            //alert(e)
             console.log(e)
           })
     }
@@ -111,14 +111,14 @@ function LendPage(){
             console.log(data)
             if(data.status==200){
                 setRefresh(!refresh)                
-                alert("update success")
+                //alert("update success")
             }else{
                 console.log(data?.msg)
-                alert(data?.msg)
-                alert('update failed')
+                //alert(data?.msg)
+                //alert('update failed')
             }
         }).catch((e)=>{
-            alert(e)
+            //alert(e)
             console.log(e)
           })
     }
