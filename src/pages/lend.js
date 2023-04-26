@@ -35,7 +35,7 @@ function LendPage(){
 
     async function getList(){
 
-        fetch(baseurl+'/lending?chain_id=5',{
+        fetch(baseurl+'/lending?chain_id=1',{
             method:"GET",
             mode:"cors",
             headers:{

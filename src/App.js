@@ -21,7 +21,6 @@ function App() {
     infuraId: '0c25d41077e64c19b03c9d89d76ac4ea',
 }))
 
-console.log(process.env.API_URL)
  const chainIds = [
     { id: 1, name: 'Ethereum' },
 ]
