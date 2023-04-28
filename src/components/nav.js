@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../img/Logo.png'
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 //import LogoDesktop from '../img/logo-horizontal@3x.png'
 import './nav.scss'
 import { MdFiberManualRecord } from 'react-icons/md'
@@ -131,6 +132,7 @@ export default function Navigation({
                                 ) : (
                                     <button className='button' style={{width:'100px'}} onClick={connectWallet}>connect </button>
                                 )}
+                                <ConnectButton/>
                     </div>
                 </div>
         </div>

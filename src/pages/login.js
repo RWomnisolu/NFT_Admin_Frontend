@@ -46,7 +46,7 @@ function LoginPage() {
 
     return (
       <div className="content">
-        <img className="logo" src={Logo}/>
+        <img className="logo" src={Logo} style={{height: "78px", width:'290px'}}/>
         <h1 className="title_1">Login</h1>
         <div  className="input_label" >username</div>
         <input

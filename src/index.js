@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { useEffect, useState } from "react";
+import { WagmiConfig } from "wagmi";
+import {
+  apiProvider,
+  configureChains,
+  getDefaultWallets,
+  RainbowKitProvider,
+} from "@rainbow-me/rainbowkit";
+import { chains, wagmiClient } from "./config/wagmi";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+            <WagmiConfig client={wagmiClient}>
+            <RainbowKitProvider chains={chains}>
+            <App />
+            </RainbowKitProvider>
+        </WagmiConfig>
   </React.StrictMode>
 );
 
