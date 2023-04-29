@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { useEffect, useState } from "react";
 import { WagmiConfig } from "wagmi";
+import '@rainbow-me/rainbowkit/styles.css'
 import {
   apiProvider,
   configureChains,
   getDefaultWallets,
   RainbowKitProvider,
+  lightTheme,
 } from "@rainbow-me/rainbowkit";
 import { chains, wagmiClient } from "./config/wagmi";
 
@@ -18,7 +20,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
             <WagmiConfig client={wagmiClient}>
-            <RainbowKitProvider chains={chains}>
+            <RainbowKitProvider chains={chains} 
+							initialChain={chains.mainnet}
+							showRecentTransactions={true}
+							modalSize="compact">
             <App />
             </RainbowKitProvider>
         </WagmiConfig>

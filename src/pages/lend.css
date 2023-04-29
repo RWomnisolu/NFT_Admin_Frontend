@@ -1,7 +1,7 @@
 .contain{
     width: fit-content;
     margin-top: 200px;
-    height: calc(100% - 200px);
+    height: calc(100vh - 200px);
     margin-bottom: 100px;
     display: flex;
     justify-content: center;

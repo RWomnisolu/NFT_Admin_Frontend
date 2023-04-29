@@ -62,9 +62,9 @@ export default function Navigation({
 
     return (
         <div className="nav_wrapper">
-                <div>
+
                     <div className="links">
-                    <Link to="/">
+                    <Link to="/" style={{width:"200px"}}>
                             <img src={Logo} className="left_logo" alt="logo" />
                     </Link>
                         {/* <Link
@@ -91,50 +91,21 @@ export default function Navigation({
                             {' '}
                             <label> Lend </label>{' '}
                         </Link>
-                        {/* {xx ? (
-                            <Link to="/login" className="nav_login">
-                                <div
-                                    className={
-                                        currPage.includes('login')
-                                            ? 'login_button'
-                                            : 'login_button_def'
-                                    }
-                                >
-                                    {' '}
-                                    Login{' '}
-                                </div>
-                            </Link>
-                        ) : (
-                            <Link to="/profile" className="nav_login">
-                                <div
-                                    className={
-                                        currPage.includes('profile')
-                                            ? 'login_button'
-                                            : 'login_button_def'
-                                    }
-                                >
-                                    {' '}
-                                    Profile{' '}
-                                </div>
-                            </Link>
-                        )} */}
+                       
                     </div>
 
-                    <div className="left_nav">
-                   
-                                {isConnected ? (
-                                     <Tooltip
-                                        address={address}
-                                        network={chain}
-                                        disconnect={disconnectWallet}
-                                        connect={connectWallet}
-                                    />     
-                                ) : (
-                                    <button className='button' style={{width:'100px'}} onClick={connectWallet}>connect </button>
-                                )}
-                                <ConnectButton/>
+                    <div className="left_nav ">
+                                <ConnectButton
+                                accountStatus={{
+                                    smallScreen: 'avatar',
+                                    largeScreen: 'full',
+                                  }}
+                                  showBalance={{
+                                    smallScreen: false,
+                                    largeScreen: true,
+                                  }}
+                                />
                     </div>
-                </div>
         </div>
     )
 }
