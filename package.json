@@ -40,7 +40,7 @@
     "web3": "^1.7.5"
   },
   "scripts": {
-    "start": " dotenv react-scripts start",
+    "start": " export SET NODE_OPTIONS=--openssl-legacy-provider && dotenv react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

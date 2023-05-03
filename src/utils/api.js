@@ -72,5 +72,7 @@ const Post = (url, data, config) => {
 export const login = (data) => Post('http://35.89.86.149:8080/login', data)
 export const PostBuy = (p) => Post('http://35.89.86.149:8080/buy', p)
 export const PostSell = (p) => Post('http://35.89.86.149:8080/repay', p)
+export const PostLookrareSell = (p) => Post('http://35.89.86.149:8080/repay', p)
+export const GetOrderNonce = (p) => Get('https://api.looksrare.org/api/v2/orders/nonce', p)
 
 export const uploadFile = (p) => Post('/file/upload', p, { content_type: 'multipart/form-data' })

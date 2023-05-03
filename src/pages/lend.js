@@ -7,6 +7,9 @@ import Cookies from "js-cookie";
 import ReactDOM from 'react-dom';
 import Modal from "../components/soldWindow";
 import Detail from "../components/detail";
+import SellTrans from "../function/sellTrans";
+import { useAccount, useConnect} from 'wagmi'
+import { GetOrderNonce } from "../utils/api";
  
 function LendPage(){
     let nav=useNavigate();
@@ -15,8 +18,11 @@ function LendPage(){
     const [loanList, setLoanList] = useState([])
     const [emptyTx, setEmptyTx] = useState(false)
     const [show, setShow]=useState(true)
+    const { address ,connector: activeConnector, isConnected } = useAccount()
+    const { connect, connectors, error, isLoading, pendingConnector } =useConnect()
     const baseurl=process.env.REACT_APP_API_URL
     console.log(process.env.REACT_APP_NFT_URL)
+
     useEffect(()=>{
         let token=Cookies.get('token');
         if(!token){
@@ -121,6 +127,17 @@ function LendPage(){
             //alert(e)
             console.log(e)
           })
+    }
+
+    async function Sell(){
+        if(!isConnected){
+            alert("please connect wallet first ")
+            return
+        }
+        const nonce = await GetOrderNonce({
+            address: address
+          })
+          console.log(nonce)
     }
 
 
